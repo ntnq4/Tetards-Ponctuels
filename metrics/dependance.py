@@ -1,5 +1,8 @@
 from functools import reduce
 
+# data_test and data_model are matrices of size d * n_test
+
+
 def abs_kendall_error(data_model, data_test):
     n_test = len(data_test[0])
     R_test = [
@@ -21,6 +24,7 @@ def abs_kendall_error(data_model, data_test):
 
 
 def intersect(data, i, j):
-    return reduce(
-        lambda x, y: x * y, [int(station[j] < station[i]) for station in data]
-    )
+    for station in data:
+        if station[j] >= station[i]:
+            return 0
+    return 1
