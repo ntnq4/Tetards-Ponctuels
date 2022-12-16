@@ -3,3 +3,5 @@ ctgan==0.5.2
 numpy==1.21.6
 sdv==0.17.1
 pandas== 1.3.5
+keras== 2.9.0
+tensorflow== 2.9.2
